@@ -29,9 +29,8 @@ public class ReversePolishNotationImpl implements ReversePolishNotation {
         for(int i = 0; i<operacion.length();i++){
             list.add(operacion.charAt(i));
         }
-        for(Character c : list){
-
-
+        while(!pila.empty()){
+            char c = pila.pop();
             switch (c) {
                 case '+':
                     num1 = Character.getNumericValue(pila.pop());
