@@ -1,7 +1,29 @@
-This are the classes with their atributes:
+Les classes que tinc amb els seus atributs son:
+Alumno:
+-nombre:String
+-instituto:Instituto
+-operaciones:List<Operaciones>
+
+Instituto:
+-nombre:String
+-alumnos:List<Alumno>
+-count:int
+
+Operacion:
+-operacion:String
+-propietario:Alumno
+
+La classe Alumno té una relació 1:N amb la classe Operación, d'aquesta manera es poden guardar totes les operacions que fa cada alumne.
+La classe Operacion té el string on es guarden els caracters de la operacio que es vol fer i tambe es guarda el nom del proppietari.
+Aixi la relació entre Alumno i Operacion es bidireccional.
+
+La relació entre Alumno i Instituto també es bidireccional. Alumno <N:1> Instituto.
+En la classe instituto es guarden la quantitat de operacions que es fan per part dels seus alumnes per aixi facilitar la operació d'ordenar instituts segons operacions.
+
+Pel que fa a com es guarden les classes alumno i instituto en el singleton:
+La quantitat d'instituts será poc variant i ens interessa fer cerques per tant es guarda com a ArrayList.
+Els alumnes sel's identifica pel nom i per tant va molt be tenir-los en una taula de Hash.
 
 
-
-Description:
 
 
